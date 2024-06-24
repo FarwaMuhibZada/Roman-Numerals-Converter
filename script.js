@@ -15,4 +15,15 @@ const numerals = [
     ['V', 5],
     ['IV', 4],
     ['I', 1]
-  ];
+];
+input.addEventListener('keydown', e => {
+    if (e.key == 'Enter') {
+      convert.click();
+    }
+    });
+    convert.addEventListener('click', () => { 
+    let value = input.value;
+    if (!value){
+      output.innerText = 'Please enter a valid number';
+    }
+    });
