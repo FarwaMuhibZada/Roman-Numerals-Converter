@@ -22,7 +22,7 @@ input.addEventListener('keydown', (e) => {
   }
 });
 convert.addEventListener('click', () => { 
-let value = input.value;
+  let value = input.value;
   if (!value) {
     output.innerText = 'Please enter a valid number';
   } else if (value < 0) {
@@ -37,6 +37,6 @@ let value = input.value;
         value -= number;
       }
     }
-  output.innerText = result; 
+    output.innerText = result; 
   }
 });
