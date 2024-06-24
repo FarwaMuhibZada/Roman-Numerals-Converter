@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-restricted-syntax */
 const input = document.getElementById('number');
 const convert = document.getElementById('convert-btn');
 const output = document.getElementById('output');
