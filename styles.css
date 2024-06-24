@@ -20,6 +20,12 @@ body {
   line-height: 2rem;
 }
 
+#logo {
+  font-size: 50px;
+  font-weight: 10px;
+  padding: 20px;
+
+}
 
 #number {
   height: 40px;
