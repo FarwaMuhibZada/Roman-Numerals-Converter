@@ -1,5 +1,12 @@
 /* eslint-disable no-console */
 /* eslint-disable no-restricted-syntax */
+module.exports = {
+  "rules": {
+    // Note: you must disable the base rule as it can report incorrect errors
+    "prefer-destructuring": "off",
+    "@typescript-eslint/prefer-destructuring": "error"
+  }
+};
 const input = document.getElementById('number');
 const convert = document.getElementById('convert-btn');
 const output = document.getElementById('output');
