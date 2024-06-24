@@ -16,6 +16,36 @@ body {
   flex-direction: column;
   margin: 200px auto;
   padding: 20px;
-  color: #02203f;
+  color: white;
   line-height: 2rem;
+}
+
+
+#number {
+  height: 40px;
+  width: 250px;
+  border-radius: 10px;
+  padding: 20px;
+  border: none;
+}
+
+#convert-btn {
+  padding: 13px 25px;
+  border-radius: 10px;
+  color: white;
+  background-color: #4facfe;
+  border: none;
+  outline: none;
+}
+
+.control {
+  padding: 20px;
+  margin: 30px auto;
+}
+
+#output {
+  color: whitesmoke;
+  padding: 10px;
+  font-size: larger;
+  font-weight: bold;
 }
