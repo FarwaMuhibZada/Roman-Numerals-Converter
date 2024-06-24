@@ -21,7 +21,7 @@ input.addEventListener('keydown', (e) => {
     convert.click();
   }
 });
-convert.addEventListener('click', () => { 
+ convert.addEventListener('click', () => { 
   let value = input.value;
   if (!value) {
     output.innerText = 'Please enter a valid number';
