@@ -1,3 +1,5 @@
+/* eslint no-restricted-syntax: ["error", "FunctionExpression", "WithStatement", "BinaryExpression[operator='in']"] */
+/* eslint "prefer-destructuring": ["error", { "object": true }, { "enforceForRenamedProperties": true }] */
 const input = document.getElementById('number');
 const convert = document.getElementById('convert-btn');
 const output = document.getElementById('output');
