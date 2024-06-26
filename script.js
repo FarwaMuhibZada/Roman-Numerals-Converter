@@ -1,5 +1,7 @@
-/* eslint no-restricted-syntax: ["error", "FunctionExpression", "WithStatement", "BinaryExpression[operator='in']"] */
-/* eslint "prefer-destructuring": ["error", { "object": true }, { "enforceForRenamedProperties": true }] */
+/* eslint no-restricted-syntax: ["error", "FunctionExpression", "WithStatement",
+ "BinaryExpression[operator='in']"] */
+/* eslint "prefer-destructuring": ["error", { "object": true },
+ { "enforceForRenamedProperties": true }] */
 const input = document.getElementById('number');
 const convert = document.getElementById('convert-btn');
 const output = document.getElementById('output');
@@ -24,7 +26,7 @@ input.addEventListener('keydown', (e) => {
   }
 });
 convert.addEventListener('click', () => {
-let value = [input.value];
+  let value = [input.value];
   if (!value) {
     output.innerText = 'Please enter a valid number';
   } else if (value < 0) {
