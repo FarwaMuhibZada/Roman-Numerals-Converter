@@ -1,7 +1,6 @@
 const input = document.getElementById('number');
 const convert = document.getElementById('convert-btn');
 const output = document.getElementById('output');
-let value = input.value;
 const numerals = [
   ['M', 1000],
   ['CM', 900],
@@ -23,6 +22,7 @@ input.addEventListener('keydown', (e) => {
   }
 });
 convert.addEventListener('click', () => {
+let value = [input.value];
   if (!value) {
     output.innerText = 'Please enter a valid number';
   } else if (value < 0) {
