@@ -1,5 +1,3 @@
-/* eslint no-restricted-syntax: ["error", "FunctionExpression", "WithStatement",
- "BinaryExpression[operator='in']"] */
 const input = document.getElementById('number');
 const convert = document.getElementById('convert-btn');
 const output = document.getElementById('output');
@@ -24,21 +22,23 @@ input.addEventListener('keydown', (e) => {
   }
 });
 convert.addEventListener('click', () => {
-  if (!input.value) {
+  const inputValue = parseInt(input.value, 10);
+  if (!inputValue) {
     output.innerText = 'Please enter a valid number';
-  } else if (input.value < 0) {
+  } else if (inputValue < 1) {
     output.innerText = 'Please enter a number greater than or equal to 1';
-  } else if (input.value > 3999) {
+  } else if (inputValue > 3999) {
     output.innerText = 'Please enter a number less than or equal to 3999';
   } else {
-    let result = '';
+let result = '';
+let TempValue = inputValue;
+    
     for (const [roman, number] of numerals) {
-      while (input.value >= number) {
+      while (TempValue >= number) {
         result += roman;
-        input.value -= number;
+        TempValue -= number;
       }
     }
-    input.value = '';
     output.innerText = result;
   }
 });
