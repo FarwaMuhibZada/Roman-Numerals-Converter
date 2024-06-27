@@ -30,9 +30,8 @@ convert.addEventListener('click', () => {
   } else if (inputValue > 3999) {
     output.innerText = 'Please enter a number less than or equal to 3999';
   } else {
-let result = '';
-let TempValue = inputValue;
-    
+    let result = '';
+    let TempValue = inputValue;
     for (const [roman, number] of numerals) {
       while (TempValue >= number) {
         result += roman;
