@@ -35,10 +35,10 @@ convert.addEventListener('click', () => {
     for (const [roman, number] of numerals) {
       while (input.value >= number) {
         result += roman;
-        input.value -= number; 
+        input.value -= number;
       }
     }
-    input.value = "";
+    input.value = '';
     output.innerText = result;
   }
 });
