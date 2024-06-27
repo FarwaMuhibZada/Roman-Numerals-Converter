@@ -1,7 +1,5 @@
 /* eslint no-restricted-syntax: ["error", "FunctionExpression", "WithStatement",
  "BinaryExpression[operator='in']"] */
-/* eslint "prefer-destructuring": ["error", { "object": true },
- { "enforceForRenamedProperties": true }] */
 const input = document.getElementById('number');
 const convert = document.getElementById('convert-btn');
 const output = document.getElementById('output');
@@ -26,21 +24,21 @@ input.addEventListener('keydown', (e) => {
   }
 });
 convert.addEventListener('click', () => {
-  let value = [input.value];
-  if (!value) {
+  if (!input.value) {
     output.innerText = 'Please enter a valid number';
-  } else if (value < 0) {
+  } else if (input.value < 0) {
     output.innerText = 'Please enter a number greater than or equal to 1';
-  } else if (value > 3999) {
+  } else if (input.value > 3999) {
     output.innerText = 'Please enter a number less than or equal to 3999';
   } else {
     let result = '';
     for (const [roman, number] of numerals) {
-      while (value >= number) {
+      while (input.value >= number) {
         result += roman;
-        value -= number;
+        input.value -= number; 
       }
     }
+    input.value = "";
     output.innerText = result;
   }
 });
