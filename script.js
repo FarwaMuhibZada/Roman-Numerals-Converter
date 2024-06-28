@@ -16,11 +16,13 @@ const numerals = [
   ['IV', 4],
   ['I', 1],
 ];
+
 input.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
     convert.click();
   }
 });
+
 convert.addEventListener('click', () => {
   const inputValue = parseInt(input.value, 10);
   if (!inputValue) {
@@ -31,13 +33,13 @@ convert.addEventListener('click', () => {
     output.innerText = 'Please enter a number less than or equal to 3999';
   } else {
     let result = '';
-    let TempValue = inputValue;
-    for (const [roman, number] of numerals) {
-      while (TempValue >= number) {
+    let tempValue = inputValue;
+    numerals.forEach(([roman, number]) => {
+      while (tempValue >= number) {
         result += roman;
-        TempValue -= number;
+        tempValue -= number;
       }
-    }
+    });
     output.innerText = result;
   }
 });
